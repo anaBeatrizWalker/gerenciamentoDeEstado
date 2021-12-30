@@ -4,10 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux'
+import storeConfig from './store/storeConfig'
+
+//Criando a store
+const store = storeConfig()
+
+/*Se fosse criar mais estados
+const estado1 = storeConfig()
+const estado2 = storeConfig()
+const estado3 = storeConfig()
+*/
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+
   document.getElementById('root')
 );
 
