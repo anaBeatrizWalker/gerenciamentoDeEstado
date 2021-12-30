@@ -2,13 +2,23 @@ import {createStore, combineReducers} from 'redux' //combina todos os reducers p
 
 const reducers = combineReducers({
     numeros: function(state, action){//chave: nome do estado, valor:função que gera o estado da chave
-        console.log(state, ' ', action)
-        return {
-            min: 1, //valores fixos
-            max: 10
+        switch(action.type){
+            case 'NUM_MIN_ALTERADO':
+                return {
+                    ...state,
+                    min: action.payload
+                }
+            default:
+                return {
+                    min: 1, //valores fixos
+                    max: 10
+                }
         }
+
     },
     nomes: function(state, action){
+        console.log('Reducer nomes..')
+        console.log(state, ' ', action)
         return [
             'Ana',
             'Gustavo',
