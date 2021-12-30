@@ -16,7 +16,7 @@ function Soma(props){
             </div>
         </Card>
     )
-}
+} 
 function mapStateToProps(state){
     return {
         min: state.numeros.min,

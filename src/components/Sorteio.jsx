@@ -15,7 +15,7 @@ function Sorteio(props){
                     <strong>{aleatorio}</strong>
                 </span>
             </div>
-        </Card>
+        </Card> 
     )
 }
 function mapStateToProps(state){
