@@ -20,7 +20,6 @@ function Media(props){
         </Card>
     )
 }
-//Função que mapeia algo que está no estado (inteiro) para dentro das propriedades do componente Media
 function mapStateToProps(state){
     return {
         min: state.numeros.min,
